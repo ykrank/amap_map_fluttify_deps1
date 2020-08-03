@@ -626,6 +626,9 @@ class SmoothMoveMarker {
   com_amap_api_maps_utils_overlay_SmoothMoveMarker _androidModel;
   MAAnnotationMoveAnimation _iosAnimation;
 
+  com_amap_api_maps_utils_overlay_SmoothMoveMarker get androidModel => _androidModel;
+  MAAnnotationMoveAnimation get iosAnimation => _iosAnimation;
+
   Future<void> stop() async {
     return platform(
       android: (pool) => _androidModel.stopMove(),
